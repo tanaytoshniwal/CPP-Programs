@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <iostream>
+#include <conio.h>
 using namespace std;
 void move(int x, int y){
 	COORD c;
@@ -8,13 +9,13 @@ void move(int x, int y){
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
 }
 int main(){
-	int X=50,Y=50;
+	int X=10,Y=10;
 	char ch;
 	system("cls");
 	move(X,Y);
 	cout<<"Name";
 	while(1){
-		cin>>ch;
+		ch=getch();
 		switch(ch){
 			case 'a':{
 				X--;
